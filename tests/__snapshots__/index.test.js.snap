@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render router async 1`] = `<div />`;
+
+exports[`should render router async 2`] = `
+<div>
+  <h1
+    id="foo"
+  >
+    foo
+  </h1>
+</div>
+`;
+
+exports[`should render router async 3`] = `
+<div>
+  <h1
+    id="bar"
+  >
+    bar
+  </h1>
+</div>
+`;
