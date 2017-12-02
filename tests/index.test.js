@@ -1,3 +1,7 @@
+// -*- mode: js-jsx -*-
+// -*- coding: utf-8 -*-
+// @flow
+
 import React from 'react'
 import { Link, Router } from 'react-router-dom'
 import createMemoryHistory from 'history/createMemoryHistory'
@@ -6,17 +10,21 @@ import renderer from 'react-test-renderer'
 import Route from '../lib'
 
 const Foo = () => (<h1 id="foo">foo</h1>)
-const Bar = () => (<h1 id="bar">bar</h1>)    
+const Bar = () => (<h1 id="bar">bar</h1>)
+const Baz = () => (<h1 id="bar">baz</h1>)
+const Qux = () => (<h1 id="bar">qux</h1>)
+const HOC = () => Component => Qux
 
 const App = () => (
   <div>
     <Route path='/foo' component={Promise.resolve(Foo)} />
     <Route path='/bar' component={Promise.resolve(Bar)} />
+    <Route path='/baz' component={Promise.resolve(Bar)} process={HOC()} />
   </div>
 )
 
 const history = createMemoryHistory({
-  initialEntries: [ '/', '/foo', '/bar' ]
+  initialEntries: [ '/', '/foo', '/bar', '/baz' ]
 })
 
 test('should render router async', (done) => {
@@ -33,7 +41,7 @@ test('should render router async', (done) => {
 
   tree = rendered.toJSON()
   expect(tree).toMatchSnapshot()
-  
+
   history.replace('/foo')
 
   setTimeout(() => {
@@ -42,6 +50,8 @@ test('should render router async', (done) => {
 
     expect(wrapper.find(Foo).exists()).toBe(true)
     expect(wrapper.find(Bar).exists()).toBe(false)
+    expect(wrapper.find(Baz).exists()).toBe(false)
+    expect(wrapper.find(Qux).exists()).toBe(false)
 
     history.replace('/bar')
 
@@ -51,8 +61,23 @@ test('should render router async', (done) => {
 
       expect(wrapper.find(Foo).exists()).toBe(false)
       expect(wrapper.find(Bar).exists()).toBe(true)
+      expect(wrapper.find(Baz).exists()).toBe(false)
+      expect(wrapper.find(Qux).exists()).toBe(false)
 
-      process.nextTick(done)
+      // Test for process
+      history.replace('/baz')
+
+      setTimeout(() => {
+        tree = rendered.toJSON()
+        expect(tree).toMatchSnapshot()
+
+        expect(wrapper.find(Foo).exists()).toBe(false)
+        expect(wrapper.find(Bar).exists()).toBe(false)
+        expect(wrapper.find(Baz).exists()).toBe(false)
+        expect(wrapper.find(Qux).exists()).toBe(true)
+
+        process.nextTick(done)
+      })
     }, 100)
   }, 100)
 })

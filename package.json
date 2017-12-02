@@ -1,6 +1,6 @@
 {
     "name": "rabbit-react-router-async",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "dist/react-router-async.js",
     "npmName": "ReactRouterAsync",
     "repository": "git@github.com:yuffiy/react-router-async.git",
@@ -15,7 +15,7 @@
         "babel-preset-env": "^1.6.0",
         "babel-preset-react": "^6.24.1",
         "enzyme": "^2.9.1",
-        "flow-bin": "^0.54.1",
+        "flow-bin": "^0.60.1",
         "history": "^4.7.2",
         "jest": "^21.1.0",
         "lodash": "^4.17.4",
@@ -34,6 +34,7 @@
         "rabbit-promise-extra": "^0.0.7"
     },
     "peerDependencies": {
+        "lodash": ">= 4",
         "react": ">= 14",
         "react-router-dom": ">= 4"
     },

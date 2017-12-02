@@ -21,3 +21,13 @@ exports[`should render router async 3`] = `
   </h1>
 </div>
 `;
+
+exports[`should render router async 4`] = `
+<div>
+  <h1
+    id="bar"
+  >
+    qux
+  </h1>
+</div>
+`;
