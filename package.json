@@ -1,6 +1,6 @@
 {
     "name": "rabbit-react-router-async",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "dist/react-router-async.js",
     "npmName": "ReactRouterAsync",
     "repository": "git@github.com:yuffiy/react-router-async.git",

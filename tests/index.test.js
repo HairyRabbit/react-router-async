@@ -9,10 +9,10 @@ import { mount } from 'enzyme'
 import renderer from 'react-test-renderer'
 import Route from '../lib'
 
-const Foo = () => (<h1 id="foo">foo</h1>)
-const Bar = () => (<h1 id="bar">bar</h1>)
-const Baz = () => (<h1 id="bar">baz</h1>)
-const Qux = () => (<h1 id="bar">qux</h1>)
+const Foo = () => (<h1>foo</h1>)
+const Bar = () => (<h1>bar</h1>)
+const Baz = () => (<h1>baz</h1>)
+const Qux = () => (<h1>qux</h1>)
 const HOC = () => Component => Qux
 
 const App = () => (

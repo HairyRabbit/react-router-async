@@ -4,9 +4,7 @@ exports[`should render router async 1`] = `<div />`;
 
 exports[`should render router async 2`] = `
 <div>
-  <h1
-    id="foo"
-  >
+  <h1>
     foo
   </h1>
 </div>
@@ -14,9 +12,7 @@ exports[`should render router async 2`] = `
 
 exports[`should render router async 3`] = `
 <div>
-  <h1
-    id="bar"
-  >
+  <h1>
     bar
   </h1>
 </div>
@@ -24,9 +20,7 @@ exports[`should render router async 3`] = `
 
 exports[`should render router async 4`] = `
 <div>
-  <h1
-    id="bar"
-  >
+  <h1>
     qux
   </h1>
 </div>
