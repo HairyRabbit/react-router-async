@@ -9,8 +9,8 @@ const format    = 'umd'
 const sourcemap = true
 const globals = {
   'react-router-dom': 'ReactRouterDOM',
-  'rabbit-lazy-component': 'LazyComponent',
-  'rabbit-promise-extra': 'PromiseExtra'
+  '@rabbitcc/lazy-component': 'LazyComponent',
+  '@rabbitcc/promise-extra': 'PromiseExtra'
 }
 
 let output, plugins = [ babel() ]
@@ -37,5 +37,5 @@ export default  {
   output,
   name,
   plugins,
-  globals  
+  globals
 }

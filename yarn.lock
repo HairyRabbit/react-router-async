@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+"@rabbitcc/lazy-component@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@rabbitcc/lazy-component/-/lazy-component-0.0.6.tgz#1bf064c05f245796805033dce0d316bd393bb0c6"
+  dependencies:
+    "@rabbitcc/promise-extra" "^0.0.8"
+
+"@rabbitcc/promise-extra@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@rabbitcc/promise-extra/-/promise-extra-0.0.8.tgz#bc5217baef3bc804edef912983ddb0560521bcff"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -2710,16 +2720,6 @@ qs@~6.4.0:
 qs@~6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
-
-rabbit-lazy-component@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/rabbit-lazy-component/-/rabbit-lazy-component-0.0.5.tgz#f8ea305c5409d856bf56bb648becb0a02e96de64"
-  dependencies:
-    rabbit-promise-extra "^0.0.7"
-
-rabbit-promise-extra@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/rabbit-promise-extra/-/rabbit-promise-extra-0.0.7.tgz#684f3951bb7a3fab05ce7464d116648cb8f1a03b"
 
 randomatic@^1.1.3:
   version "1.1.7"
