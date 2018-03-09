@@ -1,6 +1,6 @@
 {
-    "name": "rabbit-react-router-async",
-    "version": "0.0.5",
+    "name": "@rabbitcc/react-router-async",
+    "version": "0.0.6",
     "main": "dist/react-router-async.js",
     "npmName": "ReactRouterAsync",
     "repository": "git@github.com:yuffiy/react-router-async.git",
@@ -30,11 +30,10 @@
         "rollup-plugin-uglify": "^2.0.1"
     },
     "dependencies": {
-        "rabbit-lazy-component": "^0.0.5",
-        "rabbit-promise-extra": "^0.0.7"
+        "@rabbitcc/lazy-component": "^0.0.6",
+        "@rabbitcc/promise-extra": "^0.0.8"
     },
     "peerDependencies": {
-        "lodash": ">= 4",
         "react": ">= 14",
         "react-router-dom": ">= 4"
     },
